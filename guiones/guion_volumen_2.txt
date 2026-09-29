@@ -1,0 +1,610 @@
+=== Introducción ===
+Vibecoding para pajeros. Volumen dos: ahora sí en serio. Por Ramón Molina.
+
+Este volumen tiene ejercicios. Cuando escuches uno, pausa el audio y hazlo. En serio. El que escucha aprende un poco; el que rompe cosas aprende de verdad.
+
+
+=== Volvimos (y ahora en serio) ===
+Volvimos (y ahora en serio).
+
+El primer libro te enseñó a pedirle cosas a la I A. Este te enseña a construir cosas que aguanten usuarios reales, datos reales y errores reales.
+
+Hay una diferencia enorme entre una app que "funciona en mi computador" y una que puedes mandarle a cien personas sin miedo. Este volumen trata de esa diferencia: usuarios con login, datos protegidos, pruebas automáticas, agentes con memoria, agentes que leen tus documentos y la forma de lanzar todo sin que explote.
+
+Y esta vez no basta con leer. Cada capítulo tiene ejercicios. Hazlos. El que lee aprende un poco; el que rompe cosas aprende de verdad.
+
+
+Antes de seguir, revisa que ya sabes.
+
+
+Revisa: Qué es frontend, backend, base de datos y deploy.
+
+Revisa: Escribir un prompt con contexto, objetivo, reglas, formato y ejemplo.
+
+Revisa: Crear una app, guardarla en GitHub y subirla a Vercel.
+
+Revisa: Qué es un agente y cómo funciona su loop.
+
+¿Te falta alguna? Vuelve al volumen 1. No pasa nada, acá nadie te está apurando.
+
+
+Cómo funcionan los ejercicios.
+
+
+Ejercicio 0.0, dificultad baja. Así se ven. La dificultad va de baja (fácil, 15 minutos) a alta (desafío, una tarde). Al final del libro hay pistas para los más difíciles. Intenta primero sin mirarlas. Pausa el audio y hazlo.
+
+
+=== Nivel 0: Tu taller gratis ===
+Nivel 0. Tu taller gratis. Todo lo que necesitas para programar con I A, sin gastar un peso.
+
+
+=== Capítulo 1 - Instala todo, paso a paso ===
+Capítulo 1. Instala todo, paso a paso.
+
+Vas a instalar cuatro cosas. Todas son gratis y todas se usan en el mundo profesional. Sigue el orden.
+
+
+1. La terminal: pierde el miedo.
+
+
+La terminal es una ventana donde le das órdenes al computador escribiendo. En Mac se llama Terminal (búscala con Comand + Espacio). En Windows usa PowerShell (búscalo en el menú Inicio). Solo necesitas cinco comandos para sobrevivir:
+
+pwd. Qué hace: Te dice en qué carpeta estás. En la vida real: "¿Dónde estoy?".
+
+ls. Qué hace: Lista lo que hay en la carpeta. En la vida real: Mirar alrededor.
+
+cd nombre. Qué hace: Entra a una carpeta. En la vida real: Abrir una puerta.
+
+cd. Qué hace: Vuelve a la carpeta anterior. En la vida real: Salir por donde entraste.
+
+mkdir nombre. Qué hace: Crea una carpeta. En la vida real: Armar una pieza nueva.
+
+Truco de pajero. Arrastra una carpeta a la ventana de la terminal y se pega su ruta completa. Así no escribes nada.
+
+
+2. Visual Studio Code, tu editor.
+
+
+Paso 1. Entra a code.visualstudio.com y descarga la versión para tu sistema.
+
+Paso 2. Instálalo como cualquier programa. En Windows, marca la opción "Agregar a PATH".
+
+Paso 3. Ábrelo, anda a Extensiones (el ícono de cuadritos) e instala "Spanish Language Pack" si lo quieres en español.
+
+
+3. Node jota ese, el motor.
+
+
+Paso 1. Entra a nodejs.org y descarga la versión que dice ele te ese (la estable).
+
+Paso 2. Instálalo con todo por defecto: siguiente, siguiente, siguiente.
+
+Paso 3. Cierra y vuelve a abrir la terminal (si no, no se entera de que instalaste algo).
+
+
+4. Git y GitHub.
+
+
+Paso 1. Mac: escribe git --version en la terminal. Si no lo tienes, te ofrece instalarlo solo. Acepta.
+
+Paso 2. Windows: descárgalo de git-scm.com e instálalo con las opciones por defecto.
+
+Paso 3. Crea tu cuenta gratis en github.com.
+
+Paso 4. Dile a Git quién eres (una sola vez, con tu nombre y correo de GitHub):
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+
+La prueba de fuego.
+
+
+Abre una terminal nueva y escribe estos tres comandos. Cada uno debe responder con un número de versión:
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+Ojo. Si alguno dice "command not found" o "no se reconoce", casi siempre es porque no cerraste y abriste la terminal. Si sigue fallando, copia el error completo y pégaselo a la I A diciendo si estás en Mac o Windows.
+
+Ejercicio 1.1, dificultad baja. Usando solo la terminal, crea una carpeta llamada proyectos en tu escritorio, entra a ella, crea adentro otra llamada prueba y comprueba con ls que existe. Pausa el audio y hazlo.
+
+Ejercicio 1.2, dificultad baja. Dentro de prueba, escribe code. para abrir la carpeta en Visual Studio Code. Crea un archivo hola punto jota ese con la línea console.log("Hola, soy pajero pero programo") y ejecútalo con node hola punto jota ese. Pausa el audio y hazlo.
+
+
+=== Capítulo 2 - Herramientas de IA y servicios gratis ===
+Capítulo 2. Herramientas de I A y servicios gratis.
+
+No necesitas pagar para empezar. Casi todo tiene un plan gratis con límites. La estrategia del pajero es combinar varios: cuando se te acaba uno, usas otro.
+
+
+I A para programar.
+
+
+Claude (claude.ai, plan gratis). Dónde vive: Navegador o app. Úsala para: Planificar, entender errores, revisar código, aprender conceptos.
+
+GitHub Copilot Free. Dónde vive: Dentro de Visual Studio Code. Úsala para: Autocompletar código y chatear sobre tus archivos.
+
+Gemini ce ele i. Dónde vive: La terminal. Úsala para: Un agente que edita tu proyecto, con capa gratis usando tu cuenta de Google.
+
+Cursor (plan Hobby). Dónde vive: Editor propio, parecido a Visual Studio Code. Úsala para: Probar un editor pensado para I A.
+
+Cuando quieras más potencia, Claude Code (el que usamos en el volumen 1) viene incluido en los planes pagados de Claude. Parte gratis y paga solo cuando sientas que te quedas corto.
+
+
+Servicios para tus apps.
+
+
+GitHub. Gratis incluye: Repositorios ilimitados, públicos y privados. La letra chica: Nada que te preocupe al empezar.
+
+Supabase. Gratis incluye: Base de datos, login y archivos. Hasta 2 proyectos activos. La letra chica: Si un proyecto no se usa en una semana, se pausa. Lo reactivas desde el panel.
+
+Vercel (plan Hobby). Gratis incluye: Publicar apps con link propio y deploy automático. La letra chica: Pensado para proyectos personales, no comerciales.
+
+Google AI Studio. Gratis incluye: Una a pe í de I A con capa gratis para practicar agentes. La letra chica: Límites de uso por minuto y por día.
+
+Ojo. Los planes gratis cambian seguido. Antes de armar algo importante, revisa la página de precios de cada servicio. Y nunca pongas tarjeta sin activar un límite de gasto.
+
+En la vida real. Los planes gratis son como las muestras del supermercado: sirven para probar todo lo que quieras. Pero si abres un restaurante, no puedes alimentarlo con muestras.
+
+Ejercicio 2.1, dificultad baja. Activa GitHub Copilot Free en Visual Studio Code. Abre tu hola punto jota ese y pídele en el chat: "agrega una función que reciba un nombre y salude". Ejecuta el archivo y verifica que funciona. Pausa el audio y hazlo.
+
+Ejercicio 2.2, dificultad media. Instala Gemini ce ele i siguiendo sus instrucciones oficiales (con ene pe eme ). Ábrelo dentro de tu carpeta prueba y pídele que convierta hola punto jota ese en un programa que pregunte tu nombre por la terminal. Pausa el audio y hazlo.
+
+
+=== Nivel 1: Pensar antes de programar ===
+Nivel 1. Pensar antes de programar. Diez minutos de plano te ahorran diez horas de arreglos.
+
+
+=== Capítulo 3 - El plano: especificar una app ===
+Capítulo 3. El plano: especificar una app.
+
+En el volumen 1 pedíamos cosas de a poco. Eso funciona para apps chicas. Para algo más grande, la I A necesita un plano : un documento corto que diga qué es la app, para quién y qué hace. Los profesionales le dicen pe erre de o "spec".
+
+En la vida real. Nadie construye una casa diciéndole al maestro "haz una pieza. ahora otra. ahora un baño por ahí". Primero hay un plano. Después se construye pieza por pieza, siguiendo el plano.
+
+
+Plantilla de plano.
+
+
+Plano de app (llénalo tú). Dice así: NOMBRE: PROBLEMA: ¿Qué problema resuelve? (1 frase) USUARIOS: ¿Quién la usa? LO QUE HACE (máximo 5 cosas): 1. 2. 3. LO QUE NO HACE (por ahora): PANTALLAS: lista de pantallas y qué hay en cada una DATOS: qué se guarda (ej: usuarios, pedidos, notas) TECNOLOGÍA: Next jota ese + Supabase + Vercel CÓMO SÉ QUE ESTÁ LISTA: Lo tienes en el libro, listo para copiar.
+
+La sección más importante es lo que no hace. Sin ella, la I A (y tú) van a seguir agregando cosas para siempre.
+
+
+Deja que la I A te entreviste.
+
+
+Si te da paja llenar el plano, haz que la I A te pregunte:
+
+Prompt. Dice así: Quiero construir [idea en una frase]. Hazme preguntas de a una, como un product manager, hasta tener claro el plano de la app. Después escríbelo con esta plantilla: [pega la plantilla]. No escribas código todavía. Lo tienes en el libro, listo para copiar.
+
+
+Del plano a las tareas.
+
+
+Prompt. Dice así: Este es el plano de mi app: [pega el plano]. Divídelo en tareas chicas, en orden, donde cada una se pueda probar sola. Máximo 10 tareas. Para cada una, dime cómo compruebo que quedó bien. Lo tienes en el libro, listo para copiar.
+
+Guarda el plano como plano punto eme de en tu proyecto. Así cualquier agente (y tú en tres meses) sabe de qué se trata.
+
+Ejercicio 3.1, dificultad baja. Escribe el plano de una app que tú o alguien que conoces necesite de verdad (un control de turnos, una lista de clientes, un registro de gimnasio). Máximo una página. Pausa el audio y hazlo.
+
+Ejercicio 3.2, dificultad media. Pásale tu plano a la I A y pídele que busque lo que falta o es ambiguo. Corrige el plano con lo que te diga. ¿Cuántas cosas no habías pensado? Pausa el audio y hazlo.
+
+
+=== Capítulo 4 - Git como profesional ===
+Capítulo 4. Git como profesional.
+
+Hasta ahora usabas Git como botón de guardar. Ahora vas a usar su superpoder: las ramas.
+
+En la vida real. Una rama es como una copia de tu casa en un universo paralelo. Ahí puedes botar paredes, probar colores, lo que sea. Si queda bien, lo traes a la casa real. Si queda mal, borras el universo y listo.
+
+
+El flujo de todos los días.
+
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+Después, en GitHub aparece un botón para crear un Pull Request (pull request): una propuesta de "traer estos cambios a la casa real". Ahí puedes revisar todo lo que cambió antes de aceptarlo.
+
+Truco de pajero. Vercel crea un link de prueba para cada Pull Request. Puedes probar los cambios en internet antes de que lleguen a tu app principal.
+
+
+Commits que sirven.
+
+
+Commit inútil: cambios arreglos asdfg.
+
+Commit útil: Agrega botón para borrar gasto Corrige cálculo de deudas con 3 personas.
+
+Pídele a la I A: "haz commit de estos cambios con un mensaje claro en español". Lo hace mejor que tú y no le da paja.
+
+
+Cuando la embarraste.
+
+
+Quiero ver qué cambié. Comando: git status y git diff.
+
+Quiero borrar todo lo que no he guardado. Comando: git restore.
+
+Quiero ver mis commits. Comando: git log --oneline.
+
+Quiero deshacer un commit ya subido. Comando: git revert [código del commit].
+
+Ejercicio 4.1, dificultad baja. En tu proyecto de Cuentas Claras (o cualquiera), crea una rama cambiar-colores, pídele a la I A que cambie el color principal, haz commit y súbela. Pausa el audio y hazlo.
+
+Ejercicio 4.2, dificultad media. Crea el Pull Request en GitHub, revisa los cambios archivo por archivo, prueba el link de Vercel y recién ahí acéptalo ("Merge"). Pausa el audio y hazlo.
+
+
+=== Nivel 2: Apps de verdad ===
+Nivel 2. Apps de verdad. Usuarios, datos privados, otras apps y pruebas automáticas.
+
+
+=== Capítulo 5 - Usuarios, login y datos privados ===
+Capítulo 5. Usuarios, login y datos privados.
+
+Cuentas Claras tiene un problema: cualquiera ve los gastos de todos. En una app de verdad, cada usuario ve solo lo suyo. Para eso necesitas dos cosas: login (saber quién es) y reglas (qué puede ver).
+
+
+Paso 1: activar el login.
+
+
+Supabase trae login listo (se llama Auth). Actívalo en tu panel, en Authentication. El más fácil para partir es con correo y contraseña.
+
+Prompt. Dice así: Agrega login con correo y contraseña usando Supabase Auth a mi app Next jota ese. Necesito: pantalla de registro, pantalla de login, botón de cerrar sesión, y que las páginas privadas redirijan al login si no hay sesión. Usa el paquete oficial @supabase/ssr. Explícame el plan primero. Lo tienes en el libro, listo para copiar.
+
+
+Paso 2: cada fila tiene dueño.
+
+
+Cada tabla necesita una columna que diga de quién es cada fila. Y reglas (erre ele ese) que lo hagan cumplir:
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+En la vida real. auth.uid() es el guardia mirando tu carnet. La regla dice: "solo te paso las cajas que tienen tu nombre". Da lo mismo lo que pida el frontend: el guardia está en la bodega.
+
+Ojo. Con erre ele ese activado y sin reglas, nadie ve nada. Si tu app de repente "no muestra datos", lo primero que revisas son las reglas.
+
+Ejercicio 5.1, dificultad media. Agrega login a Cuentas Claras. Crea dos cuentas con correos distintos, anota gastos con cada una y comprueba que una no ve los de la otra. Pausa el audio y hazlo.
+
+Ejercicio 5.2, dificultad alta. Faltan las reglas para editar y borrar. Escríbelas tú primero (usa for update y for delete ), después compáralas con lo que propone la I A. Pausa el audio y hazlo.
+
+
+=== Capítulo 6 - Conectar tu app con otras ===
+Capítulo 6. Conectar tu app con otras.
+
+Tu app no tiene que hacerlo todo. Puede pedirle cosas a otras apps: el clima, el precio del dólar, mandar un correo, cobrar. Eso se hace con a pe ís externas.
+
+En la vida real. Tu restaurante no cría sus propias vacas. Le compra la carne a un proveedor. Las a pe ís externas son tus proveedores.
+
+
+Tu primer proveedor: el clima.
+
+
+Open-Meteo es una a pe í de clima gratis que no pide clave. Perfecta para practicar:
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+
+La regla de oro de las claves.
+
+
+La mayoría de las a pe ís piden una clave. Esa clave solo puede vivir en el backend. El flujo correcto siempre es:
+
+Paso 1. El frontend le pide algo a tu backend (una a pe í route de Next jota ese).
+
+Paso 2. Tu backend, que tiene la clave guardada en una variable de entorno, llama a la a pe í externa.
+
+Paso 3. Tu backend le devuelve al frontend solo lo que necesita.
+
+Prompt. Dice así: Quiero usar la a pe í de [servicio] en mi app Next jota ese. La clave está en la variable de entorno [NOMBRE]. Crea una a pe í route en el servidor que haga la llamada, maneje errores (a pe í caída, límite excedido) y le devuelva al frontend solo [datos]. La clave nunca debe llegar al navegador. Lo tienes en el libro, listo para copiar.
+
+Ejercicio 6.1, dificultad baja. Ejecuta el código del clima con Node en tu computador. Después cambia las coordenadas por las de tu ciudad. Pausa el audio y hazlo.
+
+Ejercicio 6.2, dificultad media. Agrega a tu app un widget que muestre la temperatura actual, pasando por una a pe í route propia. Desconecta internet y comprueba que muestra un mensaje de error amable en vez de romperse. Pausa el audio y hazlo.
+
+
+=== Capítulo 7 - Tests: que la IA no rompa lo que funcionaba ===
+Capítulo 7. Tests: que la I A no rompa lo que funcionaba.
+
+El mayor problema del vibecoding avanzado: le pides a la I A arreglar una cosa y rompe otra que ni tocaste. La solución de los profesionales son los tests : pequeños programas que revisan automáticamente que tu código haga lo que debe.
+
+En la vida real. Un test es como el control de calidad de una fábrica de bebidas: cada botella pasa por una máquina que revisa que esté llena y tapada. Si una sale mal, suena la alarma antes de que llegue al cliente.
+
+
+Un test de verdad.
+
+
+Usaremos Vitest, que es gratis y rápido. Imagina que tienes una función que divide un gasto entre personas:
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+Lo corres con npx vitest. Si todo está verde, tu código hace lo que prometía. Si algo sale rojo, sabes exactamente qué se rompió.
+
+
+El truco: tests primero.
+
+
+Prompt. Dice así: Antes de programar [función], escribe los tests con Vitest para estos casos: [lista de casos, incluidos los raros]. Córrelos y comprueba que fallan. Después programa la función hasta que todos pasen. No modifiques los tests para que pasen. Lo tienes en el libro, listo para copiar.
+
+Ojo. La última frase es clave. Si no se lo dices, a veces la I A "arregla" el test en vez de arreglar el código. Es como bajar la vara del salto alto para decir que saltaste.
+
+Ejercicio 7.1, dificultad media. Instala Vitest en tu proyecto y escribe tres tests para la función que calcula quién le debe a quién en Cuentas Claras. Incluye un caso donde nadie debe nada. Pausa el audio y hazlo.
+
+Ejercicio 7.2, dificultad alta. Rompe la función a propósito (cambia un + por un - ) y corre los tests. ¿Te avisaron? Si no, tus tests no están revisando lo importante: agrega los que falten. Pausa el audio y hazlo.
+
+
+=== Nivel 3: Agentes avanzados ===
+Nivel 3. Agentes avanzados. Agentes que recuerdan, que leen y que se conectan con todo.
+
+
+=== Capítulo 8 - Agentes con memoria ===
+Capítulo 8. Agentes con memoria.
+
+El agente del volumen 1 tenía amnesia: cada mensaje empezaba de cero. Un modelo de I A no recuerda nada por sí solo. La "memoria" es algo que tú le construyes.
+
+En la vida real. Es como un garzón con muy mala memoria pero una libreta. Antes de atenderte, lee lo que anotó de ti la última vez: "le gusta sin cebolla, siempre pide la cuenta dividida".
+
+
+Los tres tipos de memoria.
+
+
+De conversación. Qué guarda: Lo que se dijo en esta charla. Cómo se hace: Guardas los mensajes en una tabla y los mandas en cada llamada.
+
+Resumida. Qué guarda: Lo importante de charlas largas. Cómo se hace: Cuando la charla es muy larga, la I A la resume y guardas solo el resumen.
+
+De hechos. Qué guarda: Datos del usuario que sirven siempre. Cómo se hace: Le das una herramienta recordar_dato y guardas en una tabla.
+
+
+Memoria de hechos, como herramienta.
+
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+Después, en cada conversación, cargas los datos guardados de ese usuario y los pegas al final del system prompt: "Lo que sabes de este usuario:.".
+
+Ojo. Memoria es responsabilidad. Deja que el usuario vea y borre lo que el agente recuerda de él. Y protege esa tabla con erre ele ese, como todo.
+
+Ejercicio 8.1, dificultad media. Guarda el historial del agente de Cuentas Claras en una tabla mensajes de Supabase. Recarga la página y comprueba que la conversación sigue ahí. Pausa el audio y hazlo.
+
+Ejercicio 8.2, dificultad alta. Agrega la herramienta recordar_dato. Dile al agente "somos 4 en el depto: Ana, Beto, Caro y yo". Abre una conversación nueva y escribe "Beto pagó el gas". ¿Sabe quién es Beto? Pausa el audio y hazlo.
+
+
+=== Capítulo 9 - Agentes que leen tus documentos ===
+Capítulo 9. Agentes que leen tus documentos.
+
+Imagina un agente que responde preguntas sobre el reglamento de tu edificio, el menú de tu restaurante o los manuales de tu pega. No puedes pegarle mil páginas en cada mensaje. La técnica para esto se llama RAG : buscar primero, responder después.
+
+En la vida real. Es un examen con libro abierto. El agente no se sabe todo de memoria: antes de responder, busca las páginas que hablan del tema, las lee y responde con eso.
+
+
+Cómo funciona, en 4 pasos.
+
+
+Paso 1. Picar: divides tus documentos en trozos chicos (unos párrafos cada uno).
+
+Paso 2. Convertir: cada trozo se transforma en una lista de números que representa su significado (un "embedding"). Textos parecidos quedan con números parecidos.
+
+Paso 3. Buscar: cuando llega una pregunta, la conviertes igual y buscas los trozos con números más cercanos.
+
+Paso 4. Responder: le pasas a la I A la pregunta más esos trozos, y le pides que responda solo con eso y diga de dónde lo sacó.
+
+Supabase trae una extensión llamada pgvector que guarda y busca esos números. No necesitas otra base de datos.
+
+Prompt: está en el libro, en amarillo, listo para copiar y pegar.
+
+Truco de pajero. La frase "di ‘no lo sé’ si no está en los documentos" es la más importante del system prompt. Sin ella, el agente inventa respuestas que suenan perfectas.
+
+Ejercicio 9.1, dificultad alta. Arma un agente RAG con 3 documentos tuyos (un reglamento, un menú, apuntes de clases). Hazle 5 preguntas cuya respuesta está en los documentos y 2 cuya respuesta no está. ¿Cuántas respondió bien? ¿Inventó alguna? Pausa el audio y hazlo.
+
+
+=== Capítulo 10 - MCP: el USB-C de la IA ===
+Capítulo 10. eme ce pe: el USB-C de la I A.
+
+Cada vez que quieres que tu agente use algo nuevo (tu calendario, tu base de datos, Notion) tienes que programar la herramienta. eme ce pe (Model Context Protocol) es un estándar para que eso se haga una sola vez y sirva en todos lados.
+
+En la vida real. Antes cada celular tenía su cargador. Ahora casi todo usa USB-C: un solo enchufe para todo. eme ce pe es eso para la I A: cualquier app que "hable eme ce pe" se enchufa a cualquier asistente que lo soporte, como Claude, Claude Code o Gemini ce ele i.
+
+
+Dos formas de usarlo.
+
+
+Conectas servidores eme ce pe que ya existen (GitHub, Supabase, Notion y cientos más) a tu asistente. Por ejemplo, Claude Code puede consultar tu base de Supabase directamente. Como creador: Creas tu propio servidor eme ce pe para que cualquier asistente pueda usar tu app o tus datos.
+
+
+Tu propio servidor eme ce pe.
+
+
+Prompt. Dice así: Crea un servidor eme ce pe en TypeScript usando el SDK oficial @modelcontextprotocol/sdk, con transporte stdio. Debe tener dos herramientas: "listar_gastos" (lee de mi tabla gastos en Supabase) y "total_por_persona". Usa zod para validar los datos de entrada. Después explícame cómo conectarlo a Claude Code y cómo probarlo con eme ce pe Inspector. Lo tienes en el libro, listo para copiar.
+
+Ojo. Un servidor eme ce pe le da manos a la I A dentro de tus sistemas. Parte con herramientas de solo lectura. Instala servidores de terceros solo si confías en quien los hizo, igual que con cualquier programa.
+
+Ejercicio 10.1, dificultad media. Conecta un servidor eme ce pe existente (por ejemplo, el de GitHub) a tu asistente de código y pídele: "lista mis repositorios y dime cuál tiene más commits este mes". Pausa el audio y hazlo.
+
+Ejercicio 10.2, dificultad alta. Crea el servidor eme ce pe de Cuentas Claras con el prompt de arriba, conéctalo y pregúntale al asistente "¿quién ha gastado más este mes?". Pausa el audio y hazlo.
+
+
+=== Capítulo 11 - Medir, ahorrar y elegir modelo ===
+Capítulo 11. Medir, ahorrar y elegir modelo.
+
+Un agente en producción tiene dos enemigos: que responda mal y que cueste caro. Los dos se combaten igual: midiendo.
+
+
+Tu set de pruebas (evals).
+
+
+Es una lista de preguntas con lo que debería pasar. La guardas en un archivo y la corres cada vez que cambias algo:
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+Prompt. Dice así: Crea un script que lea evals punto json, mande cada entrada a mi agente, y use otra llamada a la I A como juez para decidir si la respuesta cumple lo que "espera". Al final muestra cuántas pasaron, cuáles fallaron y cuánto costó la corrida en tokens. Lo tienes en el libro, listo para copiar.
+
+
+Elegir el modelo correcto.
+
+
+Clasificar, extraer datos, respuestas simples. Modelo: Chico y rápido (como Claude Haiku). Por qué: Mucho más barato y rápido; para tareas simples basta.
+
+Razonar, usar varias herramientas, escribir código. Modelo: Mediano (como Claude Sonnet). Por qué: El equilibrio para la mayoría de los agentes.
+
+Problemas muy difíciles o largos. Modelo: El más grande (como Claude Opus). Por qué: Solo cuando los otros fallan.
+
+La receta: parte con el mediano, corre tus evals, prueba el chico. Si el chico pasa las mismas pruebas, úsalo.
+
+
+Cuatro formas de gastar menos.
+
+
+System prompts cortos. Cada palabra se cobra en cada mensaje.
+
+Historial resumido en vez de mandar toda la conversación.
+
+Prompt caching: la a pe í puede reutilizar la parte del prompt que no cambia y cobrarla más barata. Pídele a la I A que lo active.
+
+Límite de gasto mensual en la consola del proveedor. Siempre.
+
+Ejercicio 11.1, dificultad media. Escribe 10 evals para tu agente (incluye 3 maliciosas) y crea el script que las corre. Anota cuántas pasan. Pausa el audio y hazlo.
+
+Ejercicio 11.2, dificultad media. Cambia tu agente al modelo más chico y corre las mismas evals. Compara resultados y costo. ¿Vale la pena el cambio? Pausa el audio y hazlo.
+
+
+=== Nivel 4: A producción ===
+Nivel 4. A producción. Lanzar algo que aguante gente de verdad.
+
+
+=== Capítulo 12 - Checklist de seguridad antes de lanzar ===
+Capítulo 12. Checklist de seguridad antes de lanzar.
+
+Las apps hechas con I A tienen fama de inseguras, y con razón: la I A escribe código que funciona, no necesariamente código seguro. Antes de mandar el link a nadie, pasa por esta lista.
+
+
+Secretos.
+
+
+Revisa: Ninguna clave secreta está escrita en el código.
+
+Revisa: punto env punto local está en el punto git ignore y nunca se subió a GitHub.
+
+Revisa: Las claves secretas no llevan el prefijo NEXT_PUBLIC_.
+
+
+Datos.
+
+
+Revisa: erre ele ese activado en todas las tablas, con reglas para ver, crear, editar y borrar.
+
+Revisa: Probé con dos cuentas que una no ve los datos de la otra.
+
+Revisa: Todo lo que llega del usuario se valida en el servidor, no solo en el formulario.
+
+
+Agentes.
+
+
+Revisa: Las acciones graves (borrar, pagar, enviar) piden confirmación humana.
+
+Revisa: El loop tiene un máximo de vueltas.
+
+Revisa: Probé que no obedece "ignora tus instrucciones".
+
+Revisa: Hay límite de mensajes por usuario y límite de gasto en la a pe í.
+
+Prompt de auditoría. Dice así: Actúa como un experto en seguridad revisando esta app antes de lanzarla. Revisa todo el proyecto buscando: claves expuestas, tablas sin erre ele ese o con reglas débiles, datos que no se validan en el servidor, rutas de a pe í sin verificar sesión, y riesgos de prompt injection en el agente. Ordena lo que encuentres de más grave a menos grave y explica cómo arreglar cada cosa. No cambies código todavía. Lo tienes en el libro, listo para copiar.
+
+Ojo. Si subiste una clave a GitHub por error, borrarla del código no basta: queda en el historial. Anda al servicio, genera una clave nueva y borra la antigua.
+
+Ejercicio 12.1, dificultad media. Corre el prompt de auditoría sobre tu proyecto. Arregla todo lo que salga como grave y vuelve a correrlo hasta que no aparezca nada grave. Pausa el audio y hazlo.
+
+
+=== Capítulo 13 - Proyecto final: el asistente de tu negocio ===
+Capítulo 13. Proyecto final: el asistente de tu negocio.
+
+Llegó la hora de juntar todo. Vas a construir un asistente para un negocio real: el almacén de la esquina, la peluquería de tu tía, tu emprendimiento, lo que sea. Mientras más real, mejor.
+
+
+Lo que tiene que hacer.
+
+
+Los clientes chatean con él y responde preguntas usando la información del negocio (RAG).
+
+Toma pedidos o reservas y los guarda en Supabase.
+
+Recuerda a los clientes que vuelven (memoria).
+
+El dueño entra con login a un panel privado donde ve los pedidos.
+
+Está en internet, en Vercel.
+
+
+Las etapas.
+
+
+Paso 1. Plano (capítulo 3): escríbelo con el dueño del negocio si puedes.
+
+Paso 2. Base: app, login del dueño y tablas con erre ele ese (capítulo 5).
+
+Paso 3. Cerebro: el agente con la información del negocio (capítulo 9).
+
+Paso 4. Manos: herramientas para tomar pedidos, con confirmación (capítulo 11 del volumen 1).
+
+Paso 5. Memoria: clientes que vuelven (capítulo 8).
+
+Paso 6. Pruebas: tests y evals (capítulos 7 y 11).
+
+Paso 7. Lanzamiento: checklist de seguridad y deploy (capítulo 12).
+
+
+Cómo sabes que lo lograste.
+
+
+Revisa: Una persona que no eres tú lo usó y logró hacer un pedido sin ayuda.
+
+Revisa: El agente dijo "no lo sé" ante algo que no está en la información del negocio.
+
+Revisa: El dueño vio el pedido en su panel.
+
+Revisa: Tus evals pasan al noventa por ciento o más.
+
+Revisa: El prompt de auditoría no encuentra nada grave.
+
+El premio. Si terminaste esto, ya no eres un pajero que juega con I A. Eres alguien que construye software real. Muéstraselo a alguien. Ponlo en tu portafolio. Cobra por el próximo.
+
+
+=== Pistas de los ejercicios ===
+Pistas de los ejercicios.
+
+Intenta primero. Si llevas 20 minutos pegado, mira la pista. Si sigues pegado, pégale el ejercicio y tu intento a la I A y pídele que te guíe sin darte la respuesta.
+
+Ejercicio 1.1. En Mac: cd ~/Desktop. En Windows: cd $HOME\Desktop. Después mkdir proyectos, cd proyectos, mkdir prueba, ls.
+
+Ejercicio 1.2. Si code. no funciona en Mac, abre Visual Studio Code, presiona Comand + Shift + P y busca "Install ‘code’ command in PATH".
+
+Ejercicio 2.1. Copilot se activa desde el ícono de Copilot en la barra inferior de Visual Studio Code, iniciando sesión con GitHub.
+
+Ejercicio 2.2. Busca "Gemini ce ele i GitHub" para las instrucciones oficiales. Necesitas Node instalado (capítulo 1).
+
+Ejercicio 3.2. Pregúntale específicamente: "¿qué pasa si el usuario hace algo inesperado?" y "¿qué datos necesito que no mencioné?".
+
+Ejercicio 4.2. En GitHub, la pestaña "Files changed" del Pull Request muestra en verde lo agregado y en rojo lo borrado.
+
+Ejercicio 5.1. Usa una ventana de incógnito para la segunda cuenta; así no tienes que cerrar sesión.
+
+Ejercicio 5.2. Editar usa using y with check ; borrar solo using. La condición es la misma: auth.uid() = user_id.
+
+Ejercicio 6.2. Envuelve el fetch en try/catch y revisa res.ok antes de leer los datos.
+
+Ejercicio 7.1. Para que sea fácil de testear, la función debe recibir la lista de gastos y devolver las deudas, sin tocar la base de datos.
+
+Ejercicio 7.2. Si ningún test falló, te falta uno que revise un número exacto con al menos 3 personas.
+
+Ejercicio 8.2. Si no sabe quién es Beto, revisa que estés cargando los datos guardados en el system prompt de la conversación nueva.
+
+Ejercicio 9.1. Si inventa, endurece el system prompt y revisa qué trozos le está pasando la búsqueda: muchas veces el problema es que busca mal, no que responde mal.
+
+Ejercicio 10.2. En Claude Code puedes agregar servidores con el comando claude mcp add. eme ce pe Inspector te deja probar las herramientas sin ningún asistente.
+
+Ejercicio 11.2. Mira las fallas del modelo chico: si son en tareas que usan varias herramientas, puedes usar el chico para lo simple y el mediano solo para eso.
+
+Ejercicio 12.1. Revisa también el historial de Git con "busca en el historial si alguna vez se subió una clave".
+
+
+=== Cierre ===
+Si llegaste hasta acá haciendo los ejercicios, ya construyes software de verdad. Lo que sigue está en el próximo proyecto que te atrevas a lanzar. Nos vemos en producción.

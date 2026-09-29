@@ -1,0 +1,464 @@
+=== Introducción ===
+Vibecoding para pajeros. Por Ramón Molina. Hecho con I A, obvio. Volumen uno.
+
+Este audiolibro acompaña al libro. Cuando aparezca código o un prompt largo, te voy a mandar a mirarlo en el pe de efe. Todo lo demás, escúchalo tranquilo: en la micro, cocinando o tirado en la cama. Para eso somos pajeros.
+
+
+=== Antes de empezar ===
+Antes de empezar.
+
+Siempre quise escribir un libro, pero me daba paja, o simplemente escribir no era mi fuerte. Así que hice lo que haría cualquier pajero con recursos: lo desarrollé con I A.
+
+Y eso, de hecho, ya es la primera lección del libro. No necesitas ser bueno en todo. Necesitas saber qué quieres, pedirlo bien y revisar lo que te entregan. Eso es el vibecoding.
+
+Acá vamos a partir desde lo más básico —qué diablos es programar— hasta el nivel en el que estoy yo hoy: armar apps reales, subirlas a internet y construir agentes de I A que hacen cosas solos.
+
+Todo con ejemplos de la vida real, explicado para tontos (con cariño), y con prompts que puedes copiar y pegar tal cual.
+
+
+=== Nivel 0: El arranque ===
+Nivel 0. El arranque. Lo mínimo que necesitas entender para no sentirte perdido.
+
+
+=== Capítulo 1 - Qué es programar (explicado con una receta) ===
+Capítulo 1. Qué es programar (explicado con una receta).
+
+Programar es escribirle instrucciones a un computador. Nada más. El problema es que el computador es el ayudante de cocina más literal del mundo: hace exactamente lo que le dices, ni más ni menos.
+
+En la vida real. Si le dices a tu amigo "hazme un completo", él sabe que hay que calentar el pan. Si se lo dices a un computador, te entrega un pan frío con una vienesa cruda encima, porque no le dijiste que calentara nada.
+
+El código es un idioma exacto para darle esas instrucciones. Hay muchos (JavaScript, Python.); acá usamos JavaScript/TypeScript, el de las apps web y el que mejor manejan las I As.
+
+
+Las 4 cosas que hace cualquier app, de Instagram a la de tu dentista.
+
+
+Recibe algo: un clic, un texto, una foto.
+
+Guarda algo: en una variable (una cajita con nombre) o en una base de datos (un Excel gigante).
+
+Decide algo: "si el usuario está logueado, muéstrale su perfil; si no, el login".
+
+Muestra algo: una pantalla, un mensaje, un correo.
+
+
+=== Capítulo 2 - Qué es el vibecoding y por qué te conviene ===
+Capítulo 2. Qué es el vibecoding y por qué te conviene.
+
+Vibecoding es programar hablándole a la I A en español normal. Tú describes lo que quieres, la I A escribe el código, tú lo pruebas, y le dices qué cambiar. Repites hasta que funcione.
+
+En la vida real. Es como construir una casa. Antes tenías que ser albañil. Ahora eres el dueño de la obra : le dices al maestro qué quieres, pasas a revisar, y le dices "esta pared va más allá". No sabes poner ladrillos, pero la casa es tuya.
+
+
+Lo que cambia.
+
+
+Antes, para hacer una app necesitabas meses aprendiendo. Hoy puedes tener algo funcionando en una tarde. Lo difícil ya no es escribir código: es saber qué pedir y darte cuenta cuando algo está mal.
+
+Ojo. El dueño de la obra que nunca revisa termina con una casa sin baño. La I A se equivoca, inventa cosas y a veces rompe lo que ya funcionaba. Tu trabajo es probar todo, siempre.
+
+
+=== Capítulo 3 - La mentalidad del pajero eficiente ===
+Capítulo 3. La mentalidad del pajero eficiente.
+
+Ser pajero no es malo. Los mejores programadores son flojos: odian hacer dos veces la misma cosa, entonces la automatizan. La diferencia es entre el pajero que no hace nada y el pajero que hace que otro lo haga por él. Tú vas a ser el segundo.
+
+
+Las reglas de la casa.
+
+
+Pasos chicos. Nunca pidas "hazme Uber". Pide una pantalla, pruébala, sigue con la otra.
+
+Guarda seguido. Cada vez que algo funcione, guárdalo con Git (ya vas a ver qué es). Es tu botón de deshacer.
+
+Pregunta "por qué". Cuando la I A haga algo, pídele que te lo explique como a un niño. Así aprendes sin darte cuenta.
+
+Copia el error completo. Nunca digas "no funciona". Pega el mensaje de error entero.
+
+No publiques secretos. Claves y contraseñas nunca van en el código visible. Capítulo 7 lo explica.
+
+
+=== Nivel 1: Las herramientas ===
+Nivel 1. Las herramientas. El mapa del terreno y lo que vas a instalar.
+
+
+=== Capítulo 4 - Cómo funciona una app: el restaurante ===
+Capítulo 4. Cómo funciona una app: el restaurante.
+
+Toda app tiene las mismas partes. La forma más fácil de entenderlas es pensar en un restaurante.
+
+El comedor, las mesas, la carta. En tu app: Frontend. Qué es: Lo que el usuario ve y toca: botones, pantallas, colores.
+
+La cocina. En tu app: Backend. Qué es: Donde se procesa todo. El usuario no la ve, pero ahí pasa la magia.
+
+La bodega. En tu app: Base de datos. Qué es: Donde se guarda todo: usuarios, pedidos, mensajes.
+
+El garzón. En tu app: a pe í. Qué es: Lleva pedidos del comedor a la cocina y trae la respuesta.
+
+Abrir el local al público. En tu app: Deploy. Qué es: Subir tu app a internet para que cualquiera entre con un link.
+
+Cuando alguien toca "Guardar" en tu app: el comedor (frontend) le pasa el pedido al garzón (a pe í), que lo lleva a la cocina (backend), que lo guarda en la bodega (base de datos) y le avisa al comedor que todo salió bien. Eso es todo.
+
+
+=== Capítulo 5 - Tu caja de herramientas ===
+Capítulo 5. Tu caja de herramientas.
+
+No necesitas cien herramientas. Con estas cinco armas casi cualquier cosa.
+
+Claude Code (o Cursor). Para qué sirve: La I A que escribe y edita código directo en tus archivos. En el restaurante: El chef.
+
+Conductor. Para qué sirve: App para Mac que pone a varios agentes de código a trabajar al mismo tiempo, cada uno en su copia del proyecto. En el restaurante: El jefe de cocina con varios chefs.
+
+GitHub. Para qué sirve: Guarda tu código en la nube con todo su historial. En el restaurante: El libro de recetas con todas sus versiones.
+
+Supabase. Para qué sirve: Base de datos, login de usuarios y archivos, listo para usar. En el restaurante: La bodega, con guardia en la puerta.
+
+Vercel. Para qué sirve: Sube tu app a internet con un clic. En el restaurante: El local abierto al público.
+
+
+Qué instalar primero.
+
+
+Paso 1. Instala Node jota ese (versión ele te ese) desde nodejs.org. Es el motor que hace correr JavaScript en tu computador.
+
+Paso 2. Instala Git y crea tu cuenta en GitHub.
+
+Paso 3. Instala Claude Code o Cursor. Si le tienes miedo a la terminal, parte con Cursor: se ve como un editor normal.
+
+Paso 4. Crea cuentas gratis en Supabase y Vercel. Entra a ambas con tu cuenta de GitHub, te ahorras contraseñas.
+
+Truco de pajero. ¿Te trabaste instalando algo? Copia el error y pégaselo a la I A con: "Estoy en [Mac/Windows], intenté instalar X y me salió esto. Explícame paso a paso qué hacer, como si tuviera 10 años."
+
+
+=== Nivel 2: Hablarle bien a la IA ===
+Nivel 2. Hablarle bien a la I A. El noventa por ciento de los resultados malos vienen de prompts malos.
+
+
+=== Capítulo 6 - Cómo escribir buenos prompts ===
+Capítulo 6. Cómo escribir buenos prompts.
+
+Un prompt es lo que le escribes a la I A. La I A no lee mentes: si le das poco, te devuelve algo genérico. Imagina que le estás explicando la tarea a un practicante muy inteligente que llegó hoy y no sabe nada de tu proyecto.
+
+Prompt de pajero malo: hazme una app de gastos.
+
+Prompt de pajero bueno: Quiero una app web para dividir gastos con mis amigos del depto. Somos 4. Cada uno anota lo que pagó y la app dice quién le debe a quién. Usa Next jota ese y Supabase. Parte solo con la pantalla para anotar un gasto. Antes de escribir código, explícame tu plan.
+
+
+La fórmula: C.O.R.F.E.
+
+
+Contexto: qué es el proyecto, para quién es, qué ya existe.
+
+Objetivo: qué quieres lograr en este paso, uno solo.
+
+Reglas: qué tecnologías usar, qué no tocar, límites.
+
+Formato: cómo quieres la respuesta (plan primero, código después, en español, corto).
+
+Ejemplo: si puedes, muestra cómo debería verse el resultado.
+
+Plantilla para copiar. Dice así: Contexto: Estoy construyendo [qué] para [quién]. Ya tengo [lo que existe]. Objetivo: En este paso quiero [una sola cosa]. Reglas: Usa [tecnologías]. No toques [archivos o partes]. Mantenlo simple. Formato: Primero explícame tu plan en 3 a 5 pasos y espera mi OK. Después escribe el código. Ejemplo: Debería funcionar así: [describe o pega un ejemplo]. Lo tienes en el libro, listo para copiar.
+
+
+Cinco trucos que cambian todo.
+
+
+Pide el plan antes del código. Si el plan está mal, lo corriges en 10 segundos, no en una hora.
+
+Dile qué NO hacer. "No cambies el diseño", "no instales librerías nuevas".
+
+Dale permiso para preguntar. "Si algo no está claro, pregúntame antes de inventar."
+
+Pega evidencia. Errores, capturas, el archivo que falla. Mientras más ve, menos adivina.
+
+Pide que se revise. "Revisa tu código buscando errores antes de entregármelo."
+
+Ojo. Las conversaciones muy largas confunden a la I A. Si después de muchos mensajes empieza a hacer tonteras, abre una conversación nueva y resúmele dónde vas.
+
+
+=== Nivel 3: Tu primera app real ===
+Nivel 3. Tu primera app real. De cero a un link que le puedes mandar a tus amigos.
+
+
+=== Capítulo 7 - Proyecto: “Cuentas Claras” ===
+Capítulo 7. Proyecto: "Cuentas Claras".
+
+Vamos a hacer una app para dividir gastos entre amigos. Es perfecta para aprender porque tiene de todo: pantallas, base de datos y un problema real (siempre hay uno que no paga).
+
+
+Paso 1: crear el proyecto.
+
+
+Crea una carpeta vacía, ábrela con Claude Code o Cursor y escribe:
+
+Prompt. Dice así: Crea un proyecto nuevo de Next jota ese con TypeScript y Tailwind en esta carpeta. Se llama "cuentas-claras". Déjalo corriendo en local y dime qué link abro en el navegador. Explícame en 3 frases qué archivos importantes se crearon. Lo tienes en el libro, listo para copiar.
+
+Abre el link (normalmente localhost:3000 ). Si ves una página, felicidades: tienes una app corriendo en tu computador.
+
+
+Paso 2: la bodega (Supabase).
+
+
+En Supabase, crea un proyecto nuevo. Después pídele a la I A el diseño de la tabla:
+
+Prompt. Dice así: Necesito una tabla en Supabase para guardar gastos. Cada gasto tiene: descripción, monto en pesos, quién lo pagó y fecha. Dame el ese cu ele para crearla, con Row Level Security activado, y explícame qué hace cada línea. Lo tienes en el libro, listo para copiar.
+
+Copia ese ese cu ele, pégalo en el ese cu ele Editor de Supabase y dale "Run". Listo, tu bodega existe.
+
+Ojo con el Row Level Security (erre ele ese). Es el guardia de la bodega. Sin él, cualquiera que encuentre tu app puede leer o borrar tus datos. Siempre actívalo, y pídele a la I A que te explique qué reglas puso.
+
+
+Paso 3: las llaves (variables de entorno).
+
+
+Supabase te da una u erre ele y unas claves (en Settings, luego, a pe í). Van en un archivo llamado punto env punto local, nunca pegadas en el código.
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+En la vida real. La clave "anon" es como la llave de la puerta del local: la puede ver cualquier cliente, por eso el guardia (erre ele ese) es tan importante. La clave "service_role" es la llave maestra de la bodega: esa jamás va en el frontend ni en ningún lado público.
+
+
+Paso 4: conectar todo.
+
+
+Prompt. Dice así: Conecta la app con Supabase usando las variables de punto env punto local. Haz una pantalla con un formulario para anotar un gasto (descripción, monto, quién pagó) y debajo una lista de todos los gastos guardados. Diseño simple y limpio. Primero dime tu plan. Lo tienes en el libro, listo para copiar.
+
+Pruébalo: anota un gasto, recarga la página. Si sigue ahí, se guardó en la base de datos de verdad.
+
+Prompt siguiente. Dice así: Ahora agrega un resumen arriba que calcule cuánto gastó cada persona y quién le debe a quién para quedar parejos. Muéstrame con un ejemplo de 3 personas cómo funciona el cálculo antes de programarlo. Lo tienes en el libro, listo para copiar.
+
+
+Paso 5: guardar en GitHub.
+
+
+Prompt. Dice así: Inicializa Git en este proyecto, asegúrate de que punto env punto local esté en el punto git ignore, haz el primer commit y ayúdame a subirlo a un repositorio nuevo en mi GitHub. Explícame cada comando. Lo tienes en el libro, listo para copiar.
+
+
+Paso 6: abrir el local (Vercel).
+
+
+Paso 1. En Vercel toca Add New, luego, Project y elige tu repositorio de GitHub.
+
+Paso 2. En Environment Variables, pega las mismas dos variables de tu punto env punto local.
+
+Paso 3. Toca Deploy. Espera un minuto.
+
+Paso 4. Te da un link. Mándaselo a tus amigos. Tu app está en internet.
+
+La magia. Desde ahora, cada vez que subas cambios a GitHub, Vercel actualiza la app solo. Tú le pides cambios a la I A, guardas, subes, y en un minuto está online.
+
+
+=== Capítulo 8 - Cuando todo explota ===
+Capítulo 8. Cuando todo explota.
+
+Va a fallar. Muchas veces. No es que seas malo: es que así es programar, incluso para los pros. La diferencia es que ahora tienes un asistente que lee errores más rápido que tú.
+
+
+El método de las tres P.
+
+
+Pega el error completo, no un resumen.
+
+Precisa qué hiciste justo antes: "toqué el botón guardar y pasó esto".
+
+Pide la causa antes que el arreglo.
+
+Prompt para errores. Dice así: Cuando hice [acción], esperaba [lo que debía pasar] pero pasó [lo que pasó]. Este es el error completo: [pega el error] Antes de cambiar código, dime cuál crees que es la causa y cómo lo comprobarías. Lo tienes en el libro, listo para copiar.
+
+
+Si la I A entra en loop.
+
+
+A veces arregla una cosa y rompe otra, una y otra vez. Cuando pase:
+
+Vuelve al último commit que funcionaba ("vuelve al último commit", así de simple).
+
+Abre una conversación nueva.
+
+Pide el cambio más chico, en pasos más pequeños.
+
+En la vida real. Git es como guardar partida en un videojuego antes del jefe final. Si te matan, no partes de cero: vuelves al último punto guardado.
+
+
+=== Nivel 4: Agentes de IA ===
+Nivel 4. Agentes de I A. Donde la I A deja de responder y empieza a hacer cosas.
+
+
+=== Capítulo 9 - Qué es un agente (y qué no) ===
+Capítulo 9. Qué es un agente (y qué no).
+
+Un chatbot conversa. Un agente hace cosas: busca información, guarda datos, manda correos, decide qué hacer después y sigue hasta terminar la tarea.
+
+En la vida real. Un chatbot es un amigo que te dice "deberías pagar la cuenta de la luz". Un agente es un asistente con tu clave del banco que entra, la paga y te manda el comprobante.
+
+
+El loop del agente.
+
+
+Paso 1. Piensa: "el usuario quiere anotar un gasto, necesito la herramienta de guardar".
+
+Paso 2. Actúa: usa la herramienta con los datos correctos.
+
+Paso 3. Observa: mira el resultado. ¿Funcionó? ¿Hubo error?
+
+Paso 4. Repite o termina: si falta algo vuelve al paso 1; si no, responde.
+
+Un agente son tres cosas: un modelo (el cerebro), herramientas (las manos) y un loop (la costumbre de seguir hasta terminar).
+
+
+=== Capítulo 10 - Arma tu primer agente ===
+Capítulo 10. Arma tu primer agente.
+
+Le vamos a poner un agente a Cuentas Claras: en vez de llenar el formulario, le escribes "ayer pagué 12 lucas de pizza" y él solo entiende y lo guarda.
+
+
+Paso 1: la clave de la a pe í.
+
+
+Crea una cuenta en la consola de Anthropic (console.anthropic.com), genera una a pe í key y agrégala a tu punto env punto local y a Vercel como ANTHROPIC_API_KEY. Ojo: esta va sin NEXT_PUBLIC_, porque es secreta y solo la usa la cocina.
+
+
+Paso 2: definir la herramienta.
+
+
+Una herramienta es una función con un nombre, una descripción clara y los datos que necesita. La I A lee la descripción para decidir cuándo usarla.
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+
+Paso 3: el loop.
+
+
+Esto vive en el backend (una a pe í route de Next jota ese). No tienes que memorizarlo, pero lee los comentarios para entender qué pasa.
+
+En el libro tienes un bloque de código en esta parte. No te lo voy a leer símbolo por símbolo: míralo en la página, o mejor, pídele a la I A que te lo explique línea por línea.
+
+La función ejecutar es la que de verdad guarda en Supabase. No la escribas tú:
+
+Prompt. Dice así: Tengo este loop de agente con la herramienta guardar_gasto [pega el código]. Escribe la función ejecutar(nombre, input) que inserte el gasto en mi tabla de Supabase desde el servidor. Valida que el monto sea positivo. Después crea una a pe í route /api/agente y una cajita de chat simple en la página principal que la use. Lo tienes en el libro, listo para copiar.
+
+
+Paso 4: pruébalo con maldad.
+
+
+"Pagué la pizza" (sin monto). ¿Pregunta cuánto?
+
+"Pagué -5000 de nada". ¿Lo rechaza?
+
+"Borra todo". ¿Se niega? (No tiene herramienta para borrar, así que debería.)
+
+Si pasa las tres, tienes un agente de verdad.
+
+
+=== Capítulo 11 - Cómo estructurar bien un agente ===
+Capítulo 11. Cómo estructurar bien un agente.
+
+Hacer un agente que funcione una vez es fácil. Hacer uno que funcione siempre es otra liga. Esto es lo que lo separa.
+
+
+1. Un system prompt con esqueleto.
+
+
+El system prompt es el manual de trabajo del agente. Tiene que responder seis preguntas:
+
+Esqueleto de system prompt. Dice así: QUIÉN ERES: Eres [rol] de [empresa/app]. TU TRABAJO: Tu objetivo es [una cosa concreta]. HERRAMIENTAS: Tienes [herramientas]. Usa [X] cuando [situación]. REGLAS: Nunca [cosa prohibida]. Siempre [cosa obligatoria]. SI NO SABES: Si falta información, pregunta. No inventes datos. CÓMO RESPONDES: [Largo, tono, idioma, formato]. Lo tienes en el libro, listo para copiar.
+
+
+2. Pocas herramientas, bien descritas.
+
+
+Tres herramientas claras le ganan a quince confusas. Cada una debe hacer una sola cosa, con un nombre obvio y una descripción que diga cuándo usarla, no solo qué hace.
+
+
+3. Límites y frenos.
+
+
+Máximo de vueltas en el loop, para que no gaste plata infinita.
+
+Permiso humano para cosas graves: borrar, pagar, mandar correos. El agente propone, tú apruebas.
+
+Mínimo poder: si solo necesita leer, no le des herramientas para escribir.
+
+
+4. Anota todo (logs).
+
+
+Guarda cada conversación, qué herramienta usó y qué le devolvió. Cuando haga algo raro, vas a saber exactamente por qué. Pídele a la I A: "guarda cada llamada del agente en una tabla logs de Supabase".
+
+
+5. Tu set de pruebas.
+
+
+Escribe 10 a 20 mensajes típicos (y algunos maliciosos) con lo que debería pasar. Cada vez que cambies el prompt, corre todos. Así sabes si lo mejoraste o lo rompiste.
+
+Seguridad, en corto. La a pe í key solo en el servidor. Nunca en el frontend. El agente puede ser engañado con textos como "ignora tus instrucciones". Por eso los límites van en el código, no solo en el prompt. erre ele ese activado en todas las tablas. Pon un límite de gasto mensual en la consola de Anthropic.
+
+
+=== Nivel 5: Modo pro ===
+Nivel 5. Modo pro. Donde dejas de hacer el trabajo y empiezas a dirigirlo.
+
+
+=== Capítulo 12 - Varios agentes trabajando para ti ===
+Capítulo 12. Varios agentes trabajando para ti.
+
+Cuando ya manejas un agente de código, el siguiente salto es tener varios trabajando en paralelo. Para eso sirve Conductor : cada agente trabaja en su propia copia del proyecto, así no se pisan entre ellos.
+
+En la vida real. Es pasar de tener un maestro en tu casa a tener tres: uno en el baño, otro en la cocina y otro pintando. Tú pasas revisando y aprobando cada pieza.
+
+
+El flujo del pajero pro.
+
+
+Paso 1. Divide el trabajo en tareas chicas e independientes: "agregar login", "mejorar diseño del resumen", "exportar a Excel".
+
+Paso 2. Lanza un agente por tarea en Conductor, cada uno con un prompt bien armado (capítulo 6).
+
+Paso 3. Mientras trabajan, tú haces otra cosa. Ese es el punto.
+
+Paso 4. Revisa lo que hizo cada uno: prueba, lee el resumen de cambios, pide ajustes.
+
+Paso 5. Junta lo que está bien al proyecto principal y descarta lo que no.
+
+
+Un archivo que te ahorra repetirte.
+
+
+Crea un archivo claude punto eme de en la raíz del proyecto con las reglas de la casa: qué tecnologías usas, cómo nombras las cosas, qué nunca tocar. Claude Code lo lee cada vez, así no tienes que explicárselo en cada prompt.
+
+Prompt. Dice así: Revisa este proyecto completo y escribe un claude punto eme de con: qué hace la app, las tecnologías, la estructura de carpetas, cómo correrla en local, y 5 reglas que cualquier agente debe respetar al modificarla. Lo tienes en el libro, listo para copiar.
+
+
+=== Capítulo 13 - Glosario para pajeros ===
+Capítulo 13. Glosario para pajeros.
+
+a pe í. En cristiano: El garzón: lleva pedidos de un programa a otro.
+
+a pe í key. En cristiano: La contraseña que te identifica ante un servicio. Secreta.
+
+Backend. En cristiano: La cocina: lo que corre en el servidor y nadie ve.
+
+Commit. En cristiano: Una partida guardada de tu código.
+
+Deploy. En cristiano: Publicar tu app en internet.
+
+Frontend. En cristiano: Lo que el usuario ve y toca.
+
+Loop. En cristiano: Algo que se repite hasta que se cumple una condición.
+
+Prompt. En cristiano: Lo que le escribes a la I A.
+
+Repositorio. En cristiano: La carpeta de tu proyecto guardada en GitHub.
+
+erre ele ese. En cristiano: El guardia de la bodega en Supabase: decide quién ve qué.
+
+ese cu ele. En cristiano: El idioma para hablarle a la base de datos.
+
+System prompt. En cristiano: El manual de trabajo permanente de un agente.
+
+Token. En cristiano: Pedacito de texto. Las I As cobran por tokens.
+
+Variable de entorno. En cristiano: Un dato secreto guardado fuera del código.
+
+
+=== Cierre ===
+Eso fue todo. No terminaste un libro: terminaste el tutorial. Ahora anda a construir algo. Nos vemos en el volumen dos.
