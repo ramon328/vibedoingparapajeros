@@ -28,3 +28,13 @@ python3 herramientas/alinear_tiempos.py
 ```
 
 Para probar local usa un servidor con soporte de rangos (por ejemplo `npx serve`), así funciona adelantar el audio.
+
+## Publicar en Vercel
+
+Es un sitio estático: no hay build ni dependencias.
+
+- **Desde la web:** en vercel.com → Add New → Project → importa `ramon328/vibedoingparapajeros` → Framework Preset: *Other* → Deploy.
+  Cada push a `main` se publica solo.
+- **Desde la terminal:** `npx vercel` (vista previa) y `npx vercel --prod` (producción).
+
+`vercel.json` deja el audio en caché y `.vercelignore` deja fuera los scripts, guiones y tiempos, que no se usan en la página.
